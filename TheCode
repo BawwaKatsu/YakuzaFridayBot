@@ -33,4 +33,4 @@ async def nerd(ctx):
   await ctx.send(':nerd:')
 
 #always hide yo damn tokens
-bot.run(my_secret) #CHANGE THE ENVIROMENT VARIABLE FOR YOUR OWN BOT TOKEN
+bot.run(my_secret) #CHANGE THE ENVIROMENT VARIABLE FOR YOUR OWN BOT TOKEN AAAAAAAAAAAAA
