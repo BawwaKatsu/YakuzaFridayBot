@@ -1,0 +1,36 @@
+#you will have to imput your own bot token and .env file
+
+import discord
+import os
+from discord.ext import commands
+my_secret = os.environ['token'] #CHANGE THE ENVIROMENT VARIABLE FOR YOUR OWN BOT TOKEN
+import asyncio
+
+bot = commands.Bot(command_prefix="$")
+channel = bot.get_channel(984657506334814281)
+
+
+@bot.event
+async def on_ready():
+    print("Went online withh no errors")
+    while True:
+        await asyncio.sleep(5)
+        if channel:
+            await bot.send_message(channel, 'general')
+            print("successfully sent message")
+
+
+@bot.command()
+async def fridaynight(ctx):
+    await ctx.send('It is Friday night my dudes. https://rb.gy/vhhvrx')
+
+@bot.command()
+async def idiot(ctx):
+  await ctx.send('https://godsdesignperth.files.wordpress.com/2015/09/mirror-on-face.png')
+
+@bot.command()
+async def nerd(ctx):
+  await ctx.send(':nerd:')
+
+#always hide yo damn tokens
+bot.run(my_secret) #CHANGE THE ENVIROMENT VARIABLE FOR YOUR OWN BOT TOKEN
